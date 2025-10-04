@@ -1,47 +1,38 @@
-import ScrollRevealCards from "@/components/ScrollRevealCards";
+import React from 'react';
+import BeamBackground from '@/components/BeamBackground';
+import Navbar from '@/components/Navbar';
+import HeroSection from '@/components/HeroSection';
+import FeatureCards from '@/components/FeatureCards';
+import DetailedOffers from '@/components/DetailedOffers';
+import FinalCTA from '@/components/FinalCTA';
+import Footer from '@/components/Footer';
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <div className="h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted/30">
-        <div className="text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6">
-            Scroll Down
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Watch the cards appear one by one
-          </p>
-          <div className="animate-bounce">
-            <svg
-              className="w-6 h-6 mx-auto text-primary"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+      {/* Animated Beam Background */}
+      <BeamBackground />
 
-      {/* Scroll Reveal Cards Section */}
-      <ScrollRevealCards />
+      {/* Navigation */}
+      <Navbar />
 
-      {/* Footer Section */}
-      <div className="h-screen flex items-center justify-center bg-gradient-to-br from-muted/30 to-background">
-        <div className="text-center px-4">
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
-            That's All!
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            You've discovered all our core values
-          </p>
-        </div>
-      </div>
+      {/* Main Content */}
+      <main>
+        {/* Hero Section */}
+        <HeroSection />
+
+        {/* Feature Cards */}
+        <FeatureCards />
+
+        {/* Detailed Offers */}
+        <DetailedOffers />
+
+        {/* Final CTA */}
+        <FinalCTA />
+      </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

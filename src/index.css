@@ -103,3 +103,56 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Beam Background Animations */
+@keyframes beam-horizontal {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+@keyframes beam-horizontal-reverse {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+@keyframes beam-vertical {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes beam-vertical-reverse {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+.animate-beam-horizontal {
+  animation: beam-horizontal 8s linear infinite;
+}
+
+.animate-beam-horizontal-reverse {
+  animation: beam-horizontal-reverse 10s linear infinite;
+}
+
+.animate-beam-vertical {
+  animation: beam-vertical 12s linear infinite;
+}
+
+.animate-beam-vertical-reverse {
+  animation: beam-vertical-reverse 9s linear infinite;
+}
